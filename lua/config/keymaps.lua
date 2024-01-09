@@ -21,6 +21,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.api.nvim_set_keymap("n", "<C-/>", "gcc", {noremap = false })
 vim.api.nvim_set_keymap("v", "<C-/>", "gcc", {noremap = false })
 
+-- commenting while in insert mode
 function ToggleCommentAndAdjustCursor()
     local cursor_pos = vim.api.nvim_win_get_cursor(0)
     local line_was_empty = string.match(vim.api.nvim_get_current_line(), "^%s*$")
@@ -41,5 +42,4 @@ function ToggleCommentAndAdjustCursor()
 end
 
 vim.api.nvim_set_keymap("i", "<C-/>", "<Cmd>lua ToggleCommentAndAdjustCursor()<CR>", {noremap = true, silent = true})
-
 
