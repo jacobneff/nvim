@@ -12,31 +12,35 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-    defaults = {
-        lazy = true,
-    },
-    install = {
-        colorscheme = { "rose-pine" }
-    },
-    rtp = {
-        disabled_plugins = {
-    "gzip",
-    "matchit",
-    "matchparen",
-    "netrwPlugin",
-    "tohtml",
-    "tutor",
-    "zipPlugin",
-        }
-    },
-    change_detection = {
-        notify = false,
-    },
+	defaults = {
+		lazy = true,
+	},
+	install = {
+		colorscheme = { "rose-pine" },
+	},
+	rtp = {
+		disabled_plugins = {
+			"gzip",
+			"matchit",
+			"matchparen",
+			"netrwPlugin",
+			"tohtml",
+			"tutor",
+			"zipPlugin",
+		},
+	},
+	change_detection = {
+		notify = false,
+	},
 }
 
 vim.g.mapleader = " "
 vim.g.localleader = " "
 
-require("lazy").setup({
-    spec = "plugins",
-    change_detection = { notify = false } })
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	change_detection = { notify = false },
+})

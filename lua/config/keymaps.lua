@@ -18,28 +18,27 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 -- comments
-vim.api.nvim_set_keymap("n", "<C-/>", "gcc", {noremap = false })
-vim.api.nvim_set_keymap("v", "<C-/>", "gcc", {noremap = false })
+vim.api.nvim_set_keymap("n", "<C-/>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { noremap = false })
 
 -- commenting while in insert mode
 function ToggleCommentAndAdjustCursor()
-    local cursor_pos = vim.api.nvim_win_get_cursor(0)
-    local line_was_empty = string.match(vim.api.nvim_get_current_line(), "^%s*$")
+	local cursor_pos = vim.api.nvim_win_get_cursor(0)
+	local line_was_empty = string.match(vim.api.nvim_get_current_line(), "^%s*$")
 
-    -- Toggling the comment
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), 'n', true)
-    vim.cmd('normal gcc')
+	-- Toggling the comment
+	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
+	vim.cmd("normal gcc")
 
-    if line_was_empty then
-        -- If the line was originally empty, move the cursor to the end of the line and add a space
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("$a ", true, false, true), 'n', true)
-    else
-        -- Otherwise, return the cursor to its original position in insert mode
-        local col = cursor_pos[2] + 1 -- Adjusting column position for insert mode
-        vim.api.nvim_win_set_cursor(0, {cursor_pos[1], col})
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i", true, false, true), 'n', true)
-    end
+	if line_was_empty then
+		-- If the line was originally empty, move the cursor to the end of the line and add a space
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("$a ", true, false, true), "n", true)
+	else
+		-- Otherwise, return the cursor to its original position in insert mode
+		local col = cursor_pos[2] + 1 -- Adjusting column position for insert mode
+		vim.api.nvim_win_set_cursor(0, { cursor_pos[1], col })
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i", true, false, true), "n", true)
+	end
 end
 
-vim.api.nvim_set_keymap("i", "<C-/>", "<Cmd>lua ToggleCommentAndAdjustCursor()<CR>", {noremap = true, silent = true})
-
+vim.api.nvim_set_keymap("i", "<C-/>", "<Cmd>lua ToggleCommentAndAdjustCursor()<CR>", { noremap = true, silent = true })
