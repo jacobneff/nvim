@@ -5,7 +5,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- directory navigation
-vim.keymap.set("n", "<leader>m", ":Oil<CR>", opts)
+vim.keymap.set("n", "-", ":Oil<CR>", opts)
 
 -- pane navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", opts) -- move left
