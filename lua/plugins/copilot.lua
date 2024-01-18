@@ -1,6 +1,4 @@
 return {
-    "zbirenbaum/copilot.lua",
-    lazy = false,
+	"zbirenbaum/copilot.lua",
+	lazy = false,
 }
-
-
