@@ -13,6 +13,9 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", opts) -- move down
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts) -- move up
 vim.keymap.set("n", "<C-l>", "<C-w>l", opts) -- move left
 
+-- noice keymaps
+vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", {desc = "Dismiss Noice Message"})
+
 -- indenting
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
