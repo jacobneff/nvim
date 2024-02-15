@@ -62,7 +62,7 @@ opt.clipboard = "unnamedplus"
 opt.modifiable = true
 opt.encoding = "UTF-8"
 
-opt.conceallevel = 3 -- hide * markup for bold and italic
+opt.conceallevel = 2 -- hide * markup for bold and italic
 opt.spelllang = { "en" }
 
 if vim.fn.has("nvim-0.10") == 1 then
