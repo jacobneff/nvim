@@ -20,7 +20,7 @@ opt.relativenumber = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.cmdheight = 1
-opt.scrolloff = 6
+opt.scrolloff = 8
 opt.sidescrolloff = 8
 opt.completeopt = "menuone,noinsert,noselect"
 opt.list = true
@@ -71,3 +71,5 @@ end
 
 -- fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+
