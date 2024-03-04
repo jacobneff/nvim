@@ -18,6 +18,11 @@ return {
         enabled = true,
         auto_trigger = true,
         accept = false,
+        debounce = 75,
+        keymap = {
+          accept = "<C-y>",
+          dismiss = "<C-x>",
+        },
       },
     })
     local cmp_status_ok, cmp = pcall(require, "cmp")

@@ -11,9 +11,6 @@ return {
         -- import mason-lspconfig
         local mason_lspconfig = require("mason-lspconfig")
 
-        -- TODO: not working
-        -- local mason_tool_installer = require("mason_tool_installer")
-
         -- enable mason and configure icons
         mason.setup({
             ui = {
@@ -35,12 +32,5 @@ return {
             },
             automatic_installation = true,
         })
-
-        -- mason_tool_installer.setup({
-        --     ensure_installed = {
-        --         "prettierd",
-        --         "stylua",
-        --     },
-        -- })
     end,
 }
