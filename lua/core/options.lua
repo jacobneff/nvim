@@ -24,25 +24,26 @@ opt.scrolloff = 8
 opt.sidescrolloff = 8
 opt.completeopt = "menuone,noinsert,noselect"
 opt.list = true
+opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
-    -- fold = "⸱",
-    fold = " ",
-    foldsep = " ",
-    diff = "╱",
-    eob = " ",
+  foldopen = "",
+  foldclose = "",
+  -- fold = "⸱",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
 }
 
 -- highlight on yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
 })
 
 -- behavior
@@ -66,7 +67,7 @@ opt.conceallevel = 3
 opt.spelllang = { "en" }
 
 if vim.fn.has("nvim-0.10") == 1 then
-    opt.smoothscroll = true
+  opt.smoothscroll = true
 end
 
 -- fix markdown indentation settings
