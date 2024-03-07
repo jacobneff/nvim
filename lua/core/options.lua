@@ -21,7 +21,7 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 8
-opt.sidescrolloff = 8
+opt.sidescrolloff = 4
 opt.completeopt = "menuone,noinsert,noselect"
 opt.list = true
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
@@ -29,8 +29,7 @@ opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 opt.fillchars = {
   foldopen = "",
   foldclose = "",
-  -- fold = "⸱",
-  fold = " ",
+  fold = "⸱",
   foldsep = " ",
   diff = "╱",
   eob = " ",
