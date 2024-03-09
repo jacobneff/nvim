@@ -29,4 +29,6 @@ vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- comments
-vim.keymap.set("n", "<C-_>", function() require('Comment.api').toggle.linewise.current() end, opts)
+vim.keymap.set("n", "<C-_>", function()
+  require("Comment.api").toggle.linewise.current()
+end, opts)
