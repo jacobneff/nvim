@@ -19,7 +19,7 @@ opt.number = true
 opt.relativenumber = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
-opt.cmdheight = 1
+opt.cmdheight = 0 -- might like this
 opt.scrolloff = 8
 opt.sidescrolloff = 4
 opt.completeopt = "menuone,noinsert,noselect"
@@ -62,7 +62,7 @@ opt.clipboard = "unnamedplus"
 opt.modifiable = true
 opt.encoding = "UTF-8"
 
-opt.conceallevel = 3
+opt.conceallevel = 2
 opt.spelllang = { "en" }
 
 if vim.fn.has("nvim-0.10") == 1 then
