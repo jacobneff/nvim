@@ -5,10 +5,10 @@ local opts = { noremap = true, silent = true }
 -- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- pane navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", opts) -- move left
 vim.keymap.set("n", "<C-j>", "<C-w>j", opts) -- move down
+vim.keymap.set("n", "<C-l>", "<C-w>l", opts) -- move right
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts) -- move up
-vim.keymap.set("n", "<C-l>", "<C-w>l", opts) -- move left
+vim.keymap.set("n", "<C-h>", "<C-w>h", opts) -- move left
 
 -- buffers
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Buffer: go to next" })
