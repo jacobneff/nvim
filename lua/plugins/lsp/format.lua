@@ -22,6 +22,7 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
         astro = { "prettierd" },
+        haskell = { "fourmolu" },
       },
       -- format_on_save = {
       -- 	lsp_fallback = true,
