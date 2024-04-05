@@ -5,6 +5,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "j-hui/fidget.nvim", opts = {} },
+    { "folke/neodev.nvim", opts = {} },
   },
   config = function()
     -- import lspconfig plugin
@@ -85,6 +86,7 @@ return {
     -- haskell lsp
     lspconfig["hls"].setup({
       filetypes = { "haskell", "lhaskell", "cabal" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
     })
