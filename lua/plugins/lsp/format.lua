@@ -23,11 +23,13 @@ return {
         python = { "isort", "black" },
         astro = { "prettierd" },
         haskell = { "fourmolu" },
+        java = { "clang-format" },
       },
+
       -- format_on_save = {
-      -- 	lsp_fallback = true,
-      -- 	async = false,
-      -- 	timeout_ms = 1000,
+      --   lsp_fallback = true,
+      --   async = false,
+      --   timeout_ms = 1000,
       -- },
     })
 

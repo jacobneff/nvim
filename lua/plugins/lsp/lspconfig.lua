@@ -83,6 +83,12 @@ return {
       on_attach = on_attach,
     })
 
+    -- java lsp
+    lspconfig["java_language_server"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- haskell lsp
     lspconfig["hls"].setup({
       filetypes = { "haskell", "lhaskell", "cabal" },
