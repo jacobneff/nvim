@@ -1,32 +1,31 @@
-local opt = vim.opt
-
 -- tab / indentation
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 2
-opt.expandtab = true
-opt.smartindent = true
-opt.wrap = false
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
 
 -- search
-opt.incsearch = true
-opt.ignorecase = true
-opt.smartcase = true -- don't ignore case with capitals
-opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true -- don't ignore case with capitals
+vim.opt.hlsearch = false
 
 -- appearance
-opt.number = true
-opt.relativenumber = true
-opt.termguicolors = true
-opt.signcolumn = "yes"
-opt.cmdheight = 1 -- might like this
-opt.scrolloff = 8
-opt.sidescrolloff = 4
-opt.completeopt = "menuone,noinsert,noselect"
-opt.list = true
-opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
+vim.opt.cmdheight = 1 -- might like this
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 4
+vim.opt.completeopt = "menuone,noinsert,noselect"
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.colorcolumn = "80"
 
-opt.fillchars = {
+vim.opt.fillchars = {
   foldopen = "",
   foldclose = "",
   fold = "⸱",
@@ -46,27 +45,27 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- behavior
-opt.hidden = true
-opt.errorbells = false
-opt.swapfile = false
-opt.backup = false
-opt.undodir = vim.fn.expand("~/.nvim/undodir")
-opt.undofile = true
-opt.backspace = "indent,eol,start"
-opt.splitright = true
-opt.splitbelow = true
-opt.autochdir = false
--- opt.iskeyword:append("-")
-opt.mouse:append("a")
-opt.clipboard = "unnamedplus"
-opt.modifiable = true
-opt.encoding = "UTF-8"
+vim.opt.hidden = true
+vim.opt.errorbells = false
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = vim.fn.expand("~/.nvim/undodir")
+vim.opt.undofile = true
+vim.opt.backspace = "indent,eol,start"
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.autochdir = false
+-- vim.opt.iskeyword:append("-")
+vim.opt.mouse:append("a")
+vim.opt.clipboard = "unnamedplus"
+vim.opt.modifiable = true
+vim.opt.encoding = "UTF-8"
 
-opt.conceallevel = 2
-opt.spelllang = { "en" }
+vim.opt.conceallevel = 2
+vim.opt.spelllang = { "en" }
 
 if vim.fn.has("nvim-0.10") == 1 then
-  opt.smoothscroll = true
+  vim.opt.smoothscroll = true
 end
 
 -- fix markdown indentation settings
